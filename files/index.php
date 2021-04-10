@@ -18,7 +18,8 @@ if(isset($_GET["reqUrl"]))
     {
         if(strtoupper($data) == "LOGIN")
         {
-          echo 'LOGIN';
+          //echo 'LOGIN';
+          include "auth.view.php";
         }
         elseif(strtoupper($data) == "REGISTER")
         {
