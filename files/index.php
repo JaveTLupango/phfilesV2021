@@ -10,12 +10,9 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
     $url.= $_SERVER['HTTP_HOST']."";
 $logsURL = $url;
 
-//echo $logsURL;
-
-
-if(isset($_GET["data"]))
+if(isset($_GET["reqUrl"]))
 {    
-  $data = isset($_GET["data"]);
+  $data = $_GET["reqUrl"];
 
     if(isset($_SESSION['identity']) == null)
     {
@@ -23,36 +20,40 @@ if(isset($_GET["data"]))
         {
           echo 'LOGIN';
         }
-        if(strtoupper($data) == "REGISTER")
+        elseif(strtoupper($data) == "REGISTER")
         {
           echo 'REGISTER';
         }
-        if(strtoupper($data) == "FORGOTPASSWORD")
+        elseif(strtoupper($data) == "FORGOTPASSWORD")
         {
           echo 'FORGOTPASSWORD';
         }
-        if(strtoupper($data) == "RESETPASSWORD")
+        elseif(strtoupper($data) == "RESETPASSWORD")
         {
           echo 'RESETPASSWORD';
         }
-        if(strtoupper($data) == "AUTHPASS")
+        elseif(strtoupper($data) == "AUTHPASS")
         {
           echo 'AUTHPASS';
         }
-      
+        else
+        {
+          echo 'zadasdas --- ';
+          echo $data;
+        }      
     }
     else
     {
-      echo '';
+      echo 'sdcfssdfsdfsdsd';
     }
 }
 else{
-  if(isset($_SESSION['identity']) == null)
-  {
-    echo 'login';
-  }
-  else
-  {
-    echo 'Home';
-  }
+    if(isset($_SESSION['identity']) == null)
+    {
+      echo 'login';
+    }
+    else
+    {
+      echo 'Home';
+    }
 }
