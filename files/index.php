@@ -7,8 +7,13 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
     else  
          $url = "http://";   
     // Append the host(domain name, ip) to the URL.   
-    $url.= $_SERVER['HTTP_HOST']."";
+    $url.= $_SERVER['HTTP_HOST']."/phfiles/";
 $logsURL = $url;
+
+$system_name = "PHFile.com";
+
+
+
 
 if(isset($_GET["reqUrl"]))
 {    
@@ -16,14 +21,10 @@ if(isset($_GET["reqUrl"]))
 
     if(isset($_SESSION['identity']) == null)
     {
-        if(strtoupper($data) == "LOGIN")
+        if(strtoupper($data) == "LOGIN" || strtoupper($data) == "REGISTER")
         {
           //echo 'LOGIN';
           include "auth.view.php";
-        }
-        elseif(strtoupper($data) == "REGISTER")
-        {
-          echo 'REGISTER';
         }
         elseif(strtoupper($data) == "FORGOTPASSWORD")
         {
@@ -51,7 +52,8 @@ if(isset($_GET["reqUrl"]))
 else{
     if(isset($_SESSION['identity']) == null)
     {
-      echo 'login';
+      $data = "Login";
+      include "auth.view.php";
     }
     else
     {
