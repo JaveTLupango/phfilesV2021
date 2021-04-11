@@ -42,13 +42,13 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="SharedFile" class="nav-link">
+                <a href="sharedfile" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Shared File</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="FileLinkedUs" class="nav-link">
+                <a href="filelinkedus" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>File Linked Us</p>
                 </a>
@@ -56,7 +56,7 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="Trash" class="nav-link">
+            <a href="trash" class="nav-link">
               <i class="nav-icon fas fa-trash"></i>
               <p>
                 Trash file
@@ -64,7 +64,15 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
             </a>
           </li>
           <li class="user-panel nav-item has-treeview">
-            <a href="Trash" class="nav-link">
+            <a href="settings" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Settings
+              </p>
+            </a>
+          </li>
+          <li class="user-panel nav-item has-treeview">
+            <a href="upgradestorage" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Upgrade Storage
@@ -72,7 +80,7 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
             </a>
           </li>
           <li class="user-panel nav-item has-treeview">
-            <a href="Usedstorage" class="nav-link">
+            <a href="usedstorage" class="nav-link">
               <i class="nav-icon fas fa-circle text-danger"></i>
               <p>
                 20GB Used
@@ -80,7 +88,7 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
             </a>
           </li>
           <li class="user-panel nav-item has-treeview">
-            <a href="Unusedstorage" class="nav-link">
+            <a href="unusedstorage" class="nav-link">
               <i class="nav-icon fas fa-circle text-info"></i>
               <p>
                 20GB Unused
@@ -102,8 +110,7 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
                 <progress min="0" max="20" value="10"></progress><br/>
                 <center><label>10GB / 20GB</label></center>
             </a>
-          </li>
-     
+          </li>  
 
 
 

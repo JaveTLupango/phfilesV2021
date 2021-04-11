@@ -23,14 +23,14 @@ if(isset($_GET["reqUrl"]))
           //echo 'LOGIN';
           include "auth.view.php";
         }
-        elseif(strtoupper($data) == "FILE")
-        {          
-          include "file_.view.php";
-        }
+        // elseif(strtoupper($data) == "FILE")
+        // {          
+          
+        // }
         else
         {
-          echo 'zadasdas --- ';
-          echo $data;
+          include "file_.view.php";
+          //echo strtoupper($data);
         }      
     // }
     // else
