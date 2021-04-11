@@ -82,7 +82,7 @@
       <h2>Make <span>your file</span><br>accessible anywhere!</h2>
       <div>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="files/" class="btn-projects scrollto">Upload File</a>
+        <a href="file_uploads/file" class="btn-projects scrollto">Upload File</a>
       </div>
     </div>
     <div id="intro-carousel" class="owl-carousel" >
