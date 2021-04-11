@@ -1,3 +1,3 @@
 RewriteEngine On
 
-RewriteRule ^file_uploads/([a-z0-9]+) files/index.php?data=$1
+RewriteRule ^file_uploads/([a-z0-9]+) files/index.php?reqUrl=$1

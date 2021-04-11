@@ -12,41 +12,31 @@ $logsURL = $url;
 
 $system_name = "PHFile.com";
 
-
-
-
 if(isset($_GET["reqUrl"]))
 {    
   $data = $_GET["reqUrl"];
-    if(isset($_SESSION['identity']) == null)
-    {
-        if(strtoupper($data) == "LOGIN" || strtoupper($data) == "REGISTER")
+    // if(isset($_SESSION['identity']) == null)
+    // {
+        if(strtoupper($data) == "LOGIN" || strtoupper($data) == "REGISTER" 
+        || strtoupper($data) == "FORGOTPASSWORD" || strtoupper($data) == "RESETPASSWORD")
         {
           //echo 'LOGIN';
           include "auth.view.php";
         }
-        elseif(strtoupper($data) == "FORGOTPASSWORD")
-        {
-          echo 'FORGOTPASSWORD';
-        }
-        elseif(strtoupper($data) == "RESETPASSWORD")
-        {
-          echo 'RESETPASSWORD';
-        }
-        elseif(strtoupper($data) == "AUTHPASS")
-        {
-          echo 'AUTHPASS';
+        elseif(strtoupper($data) == "FILE")
+        {          
+          include "file_.view.php";
         }
         else
         {
           echo 'zadasdas --- ';
           echo $data;
         }      
-    }
-    else
-    {
-      echo 'sdcfssdfsdfsdsd';
-    }
+    // }
+    // else
+    // {
+    //   echo 'sdcfssdfsdfsdsd';
+    // }
 }
 else{
     if(isset($_SESSION['identity']) == null)
