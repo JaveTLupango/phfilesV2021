@@ -22,7 +22,7 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  
+
   <?php
         include 'layout/nav.view.php';
   ?>
