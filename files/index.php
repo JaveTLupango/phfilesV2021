@@ -18,7 +18,6 @@ $system_name = "PHFile.com";
 if(isset($_GET["reqUrl"]))
 {    
   $data = $_GET["reqUrl"];
-
     if(isset($_SESSION['identity']) == null)
     {
         if(strtoupper($data) == "LOGIN" || strtoupper($data) == "REGISTER")

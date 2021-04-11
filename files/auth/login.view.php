@@ -34,8 +34,8 @@
           <!-- /.col -->
         </div>
       </form>
-      <a href="" class="text-center">I dont have account.</a><br/>
-      <a href="" class="text-center">Forgot Password</a>
+      <a href="register" class="text-center">I dont have account.</a><br/>
+      <a href="forgotpassword" class="text-center">Forgot Password</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
