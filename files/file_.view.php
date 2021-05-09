@@ -46,7 +46,14 @@
     </section>
     <!-- Main content -->
     <?php 
-      include 'layout/data_file.view.php';
+      if( strtoupper($data) == "UPLOADFILES")
+      {
+        include 'layout/uploadfile.php';
+      }
+      else
+      {
+        include 'layout/data_file.view.php';
+      }
     ?>
     <!-- /.content -->
   </div>

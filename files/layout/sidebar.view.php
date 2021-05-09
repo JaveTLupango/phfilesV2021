@@ -1,4 +1,6 @@
 <?php 
+
+
 $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
             '<a href="" class="brand-link">'.
             '<img src="https://phfiles.com/img/favicon.png"'.
@@ -19,6 +21,7 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
           '<nav class="mt-2">'.
           '<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">';
           echo $asidebar;
+
 ?>
       <!-- Sidebar Menu -->      
           <!-- Add icons to the links using the .nav-icon class
@@ -28,6 +31,14 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 My Files
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="uploadfiles" class="nav-link">
+              <i class="nav-icon fas fa-folder"></i>
+              <p>
+                Upload Files
               </p>
             </a>
           </li>
@@ -111,11 +122,6 @@ $asidebar = '<aside class="main-sidebar sidebar-dark-primary elevation-4">'.
                 <center><label>10GB / 20GB</label></center>
             </a>
           </li>  
-
-
-
-
-
       <?php
       echo ' </ul>    </nav> </div>     </aside>';
    
