@@ -106,28 +106,13 @@ function _(el)
 function uploadFile()
 {
   debugger;
-
-    // for(var i = 0; i<= 10000; i++)
-    // {
-    //     var per = Math.round(((i / 10000) * 100) * 100);
-    //     var ss = '<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="'+per+'" aria-valuemin="0" aria-valuemax="100"> '+per+'% </div>';
-    //     _("progressHtml").innerHTML=  ss;
-    // }
     _("btn_uploadfile").setAttribute('disabled','disabled');
     _("fileInfo").classList.add("hidden");
     _("share_link").classList.remove("hidden"); 
     _("progressHtml").classList.remove("hidden"); //
     var link = "https://stackoverflow.com/questions/584751/inserting-html-into-a-div";
     debugger;
-    var _html = ' <div class="row">' +
-                       '<div class="col-lg-12">'+
-                         '   <div class="col-lg-6">Shared Link: </div>  ' +
-                            '<div class="col-lg-12">' +
-                               '<input id="fileSharedLink" class="form-control" disabled value="'+link+'">' +
-                            '</div>  ' +
-                       ' </div>                        ' +         
-                   ' </div>';
-    _("share_link").innerHTML=  _html;
+    _("fileSharedLink").value = link;
 }
 
 function func_select()
@@ -148,11 +133,10 @@ function func_select()
     _("filesize").value = _size;
     //_("fileextension").value = fileext;
     _("filestatus").value = stat;
-
     _("btn_uploadfile").removeAttribute("disabled");
     _("fileInfo").classList.remove("hidden");
     _("share_link").classList.add("hidden");
-
+    _("progressHtml").classList.add("hidden");
     //btn_uploadfile
     //1KB = 1025bit
     //1mb = 1000kb 
@@ -179,4 +163,5 @@ function filesize_validator(size)
     }
     return ret;
 }
+
 </script>
