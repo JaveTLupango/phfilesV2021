@@ -22,11 +22,16 @@
                 <div class="form">
                     <div class="file-upload-wrapper" data-text="Select your file!">                    
                         <div class="row">
-                            <div class="col-md-6">
-                                <input name="fileupload" id="fileupload" type="file" class="btn btn-file" value="" onchange="func_select();">
+                            <div class="col-md-9">
+                                <!-- <input name="fileupload" id="fileupload" type="file" class="btn btn-file" value="" onchange="func_select();"> -->
+                                
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"  value="" onchange="func_select();">
+                                    <label class="custom-file-label" for="inputGroupFile01" id="inputGroupFile01_label">Choose file</label>
+                                </div>
                             </div> 
-                            <div class="col-md-6">
-                                <button class="btn btn-info" id="btn_uploadfile" onclick="uploadFile()"> Upload now</button>
+                            <div class="col-md-3">
+                                <button class="btn btn-info" id="btn_uploadfile" onclick="uploadFile()" disabled > Upload now</button>
                             </div>   
                         </div>  
                     </div>
@@ -68,7 +73,7 @@
                     </div>
                 </div>
                 <div class="container hidden" id="progressHtml">
-                    <div class="progress" >
+                    <div class="progress" style=" height: 30px;   border-radius: 5px;">
                     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">40%</div>
                     </div>
                 </div>
@@ -110,7 +115,8 @@ function uploadFile()
     // }
     _("btn_uploadfile").setAttribute('disabled','disabled');
     _("fileInfo").classList.add("hidden");
-    _("share_link").classList.remove("hidden");
+    _("share_link").classList.remove("hidden"); 
+    _("progressHtml").classList.remove("hidden"); //
     var link = "https://stackoverflow.com/questions/584751/inserting-html-into-a-div";
     debugger;
     var _html = ' <div class="row">' +
@@ -127,7 +133,7 @@ function uploadFile()
 function func_select()
 {
     debugger;
-    var file = _("fileupload").files[0];
+    var file = _("inputGroupFile01").files[0];
     var fileName = file.name;
     var a = fileName.split('.');
     var fileext = a[a.length - 1];
@@ -137,6 +143,7 @@ function func_select()
     var _size = filesize_validator(filesize);
     var stat = filesize > (1050625000 * 2) ? "fail" : "OK";
     _("filename").value = fileName;
+    _("inputGroupFile01_label").innerHTML = fileName;
     _("filetype").value = filetype;
     _("filesize").value = _size;
     //_("fileextension").value = fileext;
