@@ -111,12 +111,12 @@ function uploadFile()
     _("share_link").classList.remove("hidden"); 
     _("progressHtml").classList.remove("hidden"); //
     var link = "https://stackoverflow.com/questions/584751/inserting-html-into-a-div";
-    debugger;
+   
     _("fileSharedLink").value = link;
 }
-
 function func_select()
 {
+    
     debugger;
     var file = _("inputGroupFile01").files[0];
     var fileName = file.name;
