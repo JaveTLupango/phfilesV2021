@@ -67,7 +67,8 @@
                         <div class="col-lg-12">
                             <div class="col-lg-6"> File Description:</div>  
                             <div class="col-lg-12">
-                                <textarea id="filedescription" class="form-control"></textarea>
+                                <textarea id="filedescription" class="form-control" onchange="func_FDMaxLenght();" maxlength="150"></textarea>
+                                <span id="lenth_max" style="float: right;">150</span><span style="float: right;">max : </span>
                             </div> 
                         </div>             
                     </div>
@@ -98,9 +99,19 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script >
 
+    
 function _(el)
 {
     return document.getElementById(el);
+}
+
+function func_FDMaxLenght()
+{
+    debugger;
+    var text_maxL = 150;
+    var val_textL = _("filedescription").value;//_("lenth_max").val();
+    var textA = text_maxL - val_textL.length;
+    _("lenth_max").innerHTML = textA;
 }
 
 function uploadFile()
@@ -110,9 +121,10 @@ function uploadFile()
     _("fileInfo").classList.add("hidden");
     _("share_link").classList.remove("hidden"); 
     _("progressHtml").classList.remove("hidden"); //
-    var link = "https://stackoverflow.com/questions/584751/inserting-html-into-a-div";
-   
+    
+    var link = "https://stackoverflow.com/questions/584751/inserting-html-into-a-div";   
     _("fileSharedLink").value = link;
+
 }
 function func_select()
 {
